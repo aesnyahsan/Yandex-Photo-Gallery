@@ -68,7 +68,7 @@
             }
 
             // multipaging
-            if (photosData.links.next) $.get(photosData.links.next+'?format=json&callback=parsePhotos', function () { }, 'script');
+            if (photosData.links.next) $.get(photosData.links.next+(photosData.links.next.indexOf('?') == -1 ? '?' : '&')+format=json&callback=parsePhotos', function () { }, 'script');
             else {
 //                 console.log('totalCount', totalCount);
                 document.title = document.title + ' — ' + photosData.title;
